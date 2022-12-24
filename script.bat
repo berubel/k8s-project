@@ -10,9 +10,9 @@ docker push berubel/k8s-database:1.0
 
 echo "Criando serviços no cluster kubernetes ..."
 
-kubectl apply -f .\service.yml
+kubectl apply -f .\service.yml --record
 
 echo "Realizando os deployments ..."
 
-kubectl apply -f .\pvc.yml
-kubectl apply -f .\deployment.yml
+kubectl apply -f .\pvc.yml --record
+kubectl apply -f .\deployment.yml --record
